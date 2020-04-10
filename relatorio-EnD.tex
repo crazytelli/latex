@@ -1,0 +1,111 @@
+\documentclass[12pt,oneside]{article}
+
+%------------------------------Pacotes Esenciais------------------------------%
+
+\usepackage[english,brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{indentfirst}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[lmargin=3cm,tmargin=3cm,rmargin=2cm,bmargin=2cm,
+headheight=28pt]{geometry} % [showframe]
+\usepackage{lmodern}
+% \usepackage{arial}			%define a fonte como Arial
+% \usepackage{times} 		%define a fonte como Times New Roman
+
+%------------------------------Pacotes adicionais-----------------------------%
+
+\usepackage{graphicx}
+%\usepackage{multicol,multirow}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{tocloft}
+%\usepackage{lipsum}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+\renewcommand\cftsecfont{\normalfont}
+\renewcommand\cftsecpagefont{\normalfont}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+%\reversemarginpar
+%\setlength{\marginparwidth}{2cm} %necessário para pkg todonotes
+%\usepackage{todonotes} % pacote para anotações em caixa laranja
+
+% -----------------estilo do header das páginas------------------------
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+% Adiciona a imagem da ucam no header
+\lhead{\includegraphics[height=0.8\headheight]{figuras/ucam-header.png}}
+\fancyhead[RO]{\thepage}
+\renewcommand{\headrulewidth}{0.8pt}
+
+%---------------------------REFÊRENCIA BIBLIOGRÁFICA--------------------------%
+
+%\usepackage[style=abnt]{biblatex} %
+\usepackage[alf,
+abnt-full-initials=no, %Iniciais do Autor abreviadas ou não.
+abnt-etal-cite=3,
+abnt-emphasize=bf] % imprime a bib em negrito. default = italico
+{abntex2cite}
+
+\usepackage[nottoc,notlof]
+{tocbibind} % Adiciona Referencia em Sumário
+
+\usepackage{color}   %May be necessary if you want to color links
+
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+    citecolor=black,
+    urlcolor=blue
+}
+
+\usepackage[toc]{appendix}
+
+%----------------------------Capa e Folha de Rosto----------------------------%
+
+\begin{document}
+
+\selectlanguage{brazil}
+\frenchspacing
+\hypersetup{pageanchor=false}
+
+\input{sections/capa.tex}
+\input{sections/folha-de-rosto.tex}
+
+\listoffigures
+\thispagestyle{empty}
+\clearpage
+%contagem de páginas começa apenas na Introdução
+\tableofcontents
+\thispagestyle{empty}
+\setcounter{page}{0}
+
+\clearpage
+\hypersetup{pageanchor=true}
+%-----------------------------Inicio do Documento--------------------------%
+\begin{document}
+
+\section{exemplo}
+
+Esse é um teste.
+
+
+
+
+
+\appendix
+\section{Anexos}
+\bibliography{bib} % válido apenas para bibtex não para biblatex
+%\printbibliography % caso utilize biblatex
+\end{document}
