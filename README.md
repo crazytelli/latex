@@ -6,6 +6,9 @@ Arquivos disponíveis:
 O arquivo `template-relatorio.tex` um template para relatório como usado em Tecnologia Mecânica - Ensaio não destrutivo.
 Ainda há margem para melhorias do arquivo.
 
+O arquivo `tex.snippets` deve ser colocado em algum diretório no path do neovim como `~/AppData/Local/nvim/my_snippets`. Ele necessita do plugin UltiSnips.
+
+
 ## A fazer:
 
 - Template para notas de aulas utilizando neovim e UltiSnips
