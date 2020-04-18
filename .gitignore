@@ -1,3 +1,4 @@
+*.pdf
 *.aux
 *.bbl
 *.blg
@@ -6,6 +7,5 @@
 *.lof
 *.log
 *.out
-*.pdf
 *.synctex.gz
 *.toc
