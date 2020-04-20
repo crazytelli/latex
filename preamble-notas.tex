@@ -2,8 +2,10 @@
 \usepackage[T1]{fontenc}
 \usepackage[brazil]{babel}
 \usepackage{csquotes}
+\usepackage{microtype}
 \usepackage{lmodern}
 \usepackage{indentfirst}
+%\usepackage{parskip} % sem indentações
 \usepackage[onehalfspacing]{setspace}
 \usepackage[lmargin=3cm,tmargin=3cm,rmargin=2cm,bmargin=2cm,headheight=28pt]{geometry} % [showframe]
 \usepackage[output-decimal-marker={,},per-mode=symbol]{siunitx}
@@ -11,6 +13,7 @@
 \usepackage{graphicx}
 \usepackage{multicol,multirow}
 \usepackage{booktabs}
+\usepackage{titlesec}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{hyperref}
@@ -29,3 +32,6 @@
 \lhead{\includegraphics[height=0.8\headheight]{C:/users/victo/OneDrive/GitHub/latex/figuras/ucam-header.png}}
 \fancyhead[RO]{\thepage}
 \renewcommand{\headrulewidth}{0.8pt}
+
+\newlist{enumalpha}{enumerate}{1}   % Cria um novo ambiente enumerate com letras
+\setlist[enumalpha]{label=\alph*)}  % pode-se criar vários sem alterar o original
