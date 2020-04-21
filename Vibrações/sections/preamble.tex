@@ -1,0 +1,33 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{csquotes}
+\usepackage[tmargin=2cm,lmargin=3cm,rmargin=2cm,bmargin=2cm]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[output-decimal-marker={,},per-mode=symbol]{siunitx}
+\usepackage{cancel}
+\usepackage{enumitem}
+%\usepackage{icomma}
+%\usepackage{titling}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{cancel}
+%\usepackage{microtype}
+\usepackage{hyperref}
+
+% Formata as seções de acordo com esses parâmetros em {}.
+% \titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
+\titleformat{\section}{\Large\bfseries} {} {0em} {} %[\titlerule]
+\titleformat{\subsection}[runin]{\bfseries\large}{}{0em}{}[ -- ]
+\titleformat{\subsubsection} {\bfseries} {} {0em} {}%[\titlerule]
+
+% Permite inserir a subseção "Resolução" com o comando \resol
+\newcommand{\resol}{\subsubsection{\underline{Resolução:}}}
+% alguns comandos que não devem ser usados mas estão no documento
+% usar o pacote siunitx é mais confiável.
+\newcommand{\kg}{\si{kg}}
+\newcommand{\mm}{\si{mm}}
+\newcommand{\cm}{\si{cm}}
+
+\newlist{enumalpha}{enumerate}{1}   % Cria um novo ambiente enumerate com letras
+\setlist[enumalpha]{label=\alph*)}  % pode-se criar vários sem alterar o original
