@@ -1,0 +1,36 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[brazil]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, mathtools}
+\usepackage{tcolorbox}
+
+\definecolor{col1}{HTML}{FF7878}
+\definecolor{col2}{HTML}{51B5F8}
+\definecolor{col3}{HTML}{68E1AA}
+\definecolor{col4}{HTML}{B869EA}
+\definecolor{col5}{HTML}{FF5500}
+
+
+\newenvironment{presentation_definition}{
+  \begin{tcolorbox}[colback=col4!10, colframe=col4!50, coltitle=col4!30!black, fonttitle=\bfseries, title=Definition]
+}
+{
+  \end{tcolorbox}
+}
+
+\begin{document}
+
+\section{Teste de colorbox}%
+\label{sec:teste_de_colorbox}
+
+    Olá
+
+    \begin{colorbox}[colback=col1]
+       teste
+    \end{colorbox}
+
+\end{document}
