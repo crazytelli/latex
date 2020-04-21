@@ -1,0 +1,17 @@
+\definecolor{col1}{HTML}{FF7878}
+\definecolor{col2}{HTML}{51B5F8}
+\definecolor{col3}{HTML}{68E1AA}
+\definecolor{col4}{HTML}{B869EA}
+\definecolor{col5}{HTML}{FF5500}
+
+
+\newenvironment{presentation_definition}{
+  \begin{tcolorbox}[colback=col4!10, colframe=col4!50, coltitle=col4!30!black, fonttitle=\bfseries, title=Definition]
+}
+{
+  \end{tcolorbox}
+}
+
+
+Fonte: Reddit
+https://www.reddit.com/r/LaTeX/comments/g51dnu/tomorrow_is_the_first_time_i_lecture_in/
