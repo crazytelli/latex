@@ -12,9 +12,10 @@
 \usepackage{todonotes}
 \reversemarginpar
 \setlength{\marginparwidth}{2cm}
+
 \author{Victor Locatelli}
-\title{}
-\date{}
+\title{Equações de Vibrações Mecânicas}
+\date{\today}
 
 \begin{document}
 
@@ -92,5 +93,20 @@ x_{t}=A_{1} e^{\left[\omega_{n}(-\zeta+\sqrt{\zeta^{2}-1})\right] t}+A_{2} e^{\l
     \item Sistema criticamente amortecido: $\zeta = 1$
     \item Sistema sub-amortecido: $\zeta < 1$
 \end{itemize}
+
+\section{Sistema Criticamente Amortecido}%
+\label{sec:sistema_criticamente_amortecido}
+A equação da posição é a seguinte, visto que $\lambda_1 = \lambda_2$
+\begin{equation}\label{eq:posição}
+x(t)=\left(A_{1}+A_{2} t\right) e^{-\omega_{n} t}
+\end{equation}
+
+E a equação da velocidade (derivada primeira da equação \ref{eq:posição})
+fica da forma:
+\begin{equation}
+\dot{x}(t)=A_{2} e^{-\omega_{n} t}+\left(A_{1}+A_{2} t\right)\left(-\omega_{n}\right) e^{-\omega_{n} t}
+\end{equation}
+
+
 
 \end{document}
