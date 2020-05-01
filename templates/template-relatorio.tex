@@ -30,6 +30,10 @@ headheight=28pt]{geometry} % [showframe]
 \floatstyle{plaintop}
 \restylefloat{table}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Adiciona pontos nas seções no sumário (pacote article)  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \renewcommand\cftsecfont{\normalfont}
 \renewcommand\cftsecpagefont{\normalfont}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -51,15 +55,24 @@ headheight=28pt]{geometry} % [showframe]
 
 %---------------------------REFÊRENCIA BIBLIOGRÁFICA--------------------------%
 
-%\usepackage[style=abnt]{biblatex} %
-\usepackage[alf,
-abnt-full-initials=no, %Iniciais do Autor abreviadas ou não.
-abnt-etal-cite=3,
-abnt-emphasize=bf] % imprime a bib em negrito. default = italico
-{abntex2cite}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %  Utilizando pacote abntex2cite  %
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[nottoc,notlof]
-{tocbibind} % Adiciona Referencia em Sumário
+%\usepackage[alf,
+%abnt-full-initials=no, %Iniciais do Autor abreviadas ou não.
+%abnt-etal-cite=3,
+%abnt-emphasize=bf] % imprime a bib em negrito. default = italico
+%{abntex2cite}
+%\usepackage[nottoc,notlof] {tocbibind} % Adiciona Referencia em Sumário
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Utilizando biblatex (preferível)  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[backend=biber,style=abnt,giveninits]{biblatex} %
+
+%%%%%%%%%% Links coloridos %%%%%%%%%%%%%%%%%
 
 \usepackage{color}   %May be necessary if you want to color links
 
@@ -71,7 +84,11 @@ abnt-emphasize=bf] % imprime a bib em negrito. default = italico
     urlcolor=blue
 }
 
-\usepackage[toc]{appendix}
+%%%%%%%%%%%%%%
+%  Apêndice  %
+%%%%%%%%%%%%%%
+
+%\usepackage[toc]{appendix} % caso o documento possua apêndice
 
 %----------------------------Capa e Folha de Rosto----------------------------%
 
@@ -99,10 +116,11 @@ abnt-emphasize=bf] % imprime a bib em negrito. default = italico
 \section{exemplo}
 
 
-
-
 %\appendix
 %\section{Anexos}
-\bibliography{bib} % válido apenas para bibtex não para biblatex
-%\printbibliography % caso utilize biblatex
+
+
+%\bibliography{bib} % válido apenas para bibtex não para biblatex
+
+\printbibliography[heading=bibintoc] % caso utilize biblatex
 \end{document}
