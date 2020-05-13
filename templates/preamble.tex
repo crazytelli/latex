@@ -10,6 +10,9 @@
 \usepackage[lmargin=3cm,tmargin=3cm,rmargin=2cm,bmargin=2cm,headheight=28pt]{geometry} % [showframe]
 \usepackage[output-decimal-marker={,},per-mode=symbol]{siunitx}
 
+\usepackage{lipsum}
+\setlipsumdefault{1}
+
 \usepackage{graphicx}
 \usepackage{multicol,multirow}
 \usepackage{booktabs}
@@ -24,7 +27,18 @@
 \floatstyle{plaintop}
 \restylefloat{table}
 
-\usepackage{lipsum}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Adiciona pontos nas seções no sumário (classe article)  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand\cftsecfont{\normalfont}
+\renewcommand\cftsecpagefont{\normalfont}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  referencias bibliográficas  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[backend=biber,style=abnt,giveninits]{biblatex} %
 
 \usepackage{fancyhdr}
 \fancyhf{}
@@ -35,3 +49,14 @@
 
 \newlist{enumalpha}{enumerate}{1}   % Cria um novo ambiente enumerate com letras
 \setlist[enumalpha]{label=\alph*)}  % pode-se criar vários sem alterar o original
+
+\usepackage{color}   %May be necessary if you want to color links
+
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+    citecolor=black,
+    urlcolor=blue
+}
+
