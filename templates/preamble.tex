@@ -41,7 +41,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  referencias bibliográficas  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[backend=biber,style=abnt,giveninits]{biblatex} %
+\usepackage[backend=biber,style=abnt,]{biblatex} %
+
+% Documentação biblatex-abnt
+% http://linorg.usp.br/CTAN/macros/latex/contrib/biblatex-contrib/biblatex-abnt/doc/biblatex-abnt.pdf
+\usepackage[backend=biber,
+style=abnt,             % estilo alfabético
+%style=abnt-numeric,    % estilo numérico
+giveninits,             % Apenas iniciais do primeiro nome do autor
+justify,                %justifica as referências ao invés de alinhar à esquerda
+noslsn,                 % oculta opções como s.l s.n
+backref                 % Especifica as páginas em que cada entrada foi citada
+]{biblatex}
 
 \usepackage{fancyhdr}
 \fancyhf{}
